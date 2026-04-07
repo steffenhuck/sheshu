@@ -1,7 +1,7 @@
 :root {
   --bg: #f3f3f1;
-  --text: #2a2a2a;
-  --muted: #6a6a6a;
+  --text: #2d2d2d;
+  --muted: #6c6c6c;
 }
 
 * {
@@ -13,38 +13,26 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: "Inter", sans-serif;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
+  line-height: 1.75;
 }
 
 .page {
-  max-width: 760px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 48px 28px 72px;
+  padding: 56px 28px 80px;
 }
 
-.hero-wrap {
-  margin-bottom: 36px;
-}
-
-/* 🔑 KEY FIX: HERO IMAGE */
-.hero {
-  width: 100%;
-  height: 240px;          /* fixed height = no more oversized image */
-  object-fit: cover;      /* crops nicely */
-  object-position: 50% 45%;
-  display: block;
-}
+/* Title */
 
 h1 {
   font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
-  margin-bottom: 40px;
   color: var(--muted);
+  margin-bottom: 30px;
 }
 
 .subtitle a {
@@ -57,35 +45,47 @@ h1 {
   text-decoration-color: #888;
 }
 
-/* 🔑 KEY FIX: DIALOGUE STRUCTURE */
-.line {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 14px;
-  margin-bottom: 18px;
+/* Image */
+
+.hero-wrap {
+  margin-bottom: 40px;
+}
+
+.hero {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: 50% 45%;
+}
+
+/* Dialogue */
+
+.block {
+  margin-bottom: 24px;
 }
 
 .speaker {
+  font-size: 0.9rem;
   color: var(--muted);
-  font-weight: 500;
+  margin-bottom: 4px;
 }
 
 .utterance {
-  line-height: 1.7;
+  padding-left: 18px;
 }
 
-/* 📱 Mobile */
+/* Mobile */
+
 @media (max-width: 600px) {
   .hero {
-    height: 180px;
+    height: 240px;
   }
 
-  .line {
-    grid-template-columns: 1fr;
-    gap: 4px;
+  .page {
+    padding: 36px 20px 60px;
   }
 
-  .speaker {
-    font-size: 0.95rem;
+  .utterance {
+    padding-left: 12px;
   }
 }
